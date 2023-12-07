@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+</head>
+
+<body>
+
+    <div id="formContainer">
+
+        <h2>Form Validation</h2>
+
+        <form id="Form" onsubmit="return validateForm()">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+            <span id="nameError" class="error"></span>
+            <br>
+
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address">
+            <span id="addressError" class="error"></span>
+            <br>
+
+            <label for="contact">Contact:</label>
+            <input type="text" id="contact" name="contact">
+            <span id="contactError" class="error"></span>
+            <br>
+
+            <label for="userId">User ID:</label>
+            <input type="text" id="userId" name="userId">
+            <span id="userIdError" class="error"></span>
+            <br>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password">
+            <span id="passwordError" class="error"></span>
+            <br>
+
+            <input type="submit" value="Submit">
+        </form>
+
+    </div>
+
+    <script>
+        function validateForm() {
+            var name = document.getElementById('name').value;
+            var address = document.getElementById('address').value;
+            var contact = document.getElementById('contact').value;
+            var userId = document.getElementById('userId').value;
+            var password = document.getElementById('password').value;
+
+            if (name === "") {
+                document.getElementById('nameError').innerHTML = 'Name is required';
+                return false;
+            } else {
+                document.getElementById('nameError').innerHTML = '';
+            }
+
+            if (address === "") {
+                document.getElementById('addressError').innerHTML = 'Address is required';
+                return false;
+            } else {
+                document.getElementById('addressError').innerHTML = '';
+            }
+
+            if (contact === "") {
+                document.getElementById('contactError').innerHTML = 'Contact is required';
+                return false;
+            } else {
+                document.getElementById('contactError').innerHTML = '';
+            }
+
+            if (userId === "") {
+                document.getElementById('userIdError').innerHTML = 'User ID is required';
+                return false;
+            } else {
+                document.getElementById('userIdError').innerHTML = '';
+            }
+
+            if (password.length < 8) {
+                document.getElementById('passwordError').innerHTML = 'Password must be at least 8 characters';
+                return false;
+            } else if (!/[A-Z]/.test(password)) {
+                document.getElementById('passwordError').innerHTML = 'Password must contain at least one capital letter';
+                return false;
+            } else if (!/[!@#$%^&*(),.?":{}|<>]/.test(password)) {
+                document.getElementById('passwordError').innerHTML = 'Password must contain at least one special character';
+                return false;
+            } else {
+                document.getElementById('passwordError').innerHTML = '';
+            }
+
+            alert('Form submitted successfully!');
+            window.location.href = 'https://www.instagram.com/riyanaaaaa_a/';
+            return true;
+        }
+
+
+    </script>
+
+</body>
+
+</html>

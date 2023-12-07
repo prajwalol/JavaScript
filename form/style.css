@@ -1,0 +1,43 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  background-image: url(https://www.google.com/imgres?imgurl=https%3A%2F%2Fvariety.com%2Fwp-content%2Fuploads%2F2022%2F07%2Fbeabadoobee-credit-Erika-Kamano.jpg&tbnid=hUbMMwsDAJ9D6M&vet=12ahUKEwjmuN3uif2CAxX7ZmwGHczkDJ0QMygAegQIARBz..i&imgrefurl=https%3A%2F%2Fvariety.com%2F2022%2Fmusic%2Fnews%2Fbeabadoobee-beatopia-rivers-cuomo-1235310163%2F&docid=OjDuWpYxY-cgvM&w=1000&h=562&q=beabadoobee&ved=2ahUKEwjmuN3uif2CAxX7ZmwGHczkDJ0QMygAegQIARBz);
+}
+
+#formContainer {
+  width: 400px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+}
+
+.error {
+  color: red;
+}
+
+input[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+  cursor: pointer;
+}
