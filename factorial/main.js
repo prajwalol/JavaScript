@@ -1,4 +1,4 @@
-function factorial() {
+function fact() {
   var i;
   f = 1;
   var n = Number(document.getElementById("s").value);
